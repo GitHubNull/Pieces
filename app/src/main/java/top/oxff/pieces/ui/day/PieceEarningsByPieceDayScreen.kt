@@ -63,7 +63,7 @@ fun DayScreen(dateState: PieceEarningsByDayState, dayOnEvent: (PieceEarningsByDa
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(2f)
+                .weight(3f)
         )
         {
             DayHeaderScreen(dayEarnings = totalMoney, dateTime = dateState.targetDate)

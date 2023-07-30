@@ -72,7 +72,7 @@ fun YearScreenContent(yearState: PieceEarningsByYearState,
         val formattedString = yearState.year.format(formatter)
         Box(modifier = Modifier
             .fillMaxWidth()
-            .weight(2f)) {
+            .weight(3f)) {
             YearScreenHeader(formattedString, yearTotal)
         }
 
@@ -172,7 +172,7 @@ fun InsertTestDataButton() {
                 // 创建 DAO 对象
                 val dao = AppDatabase.getInstance(context).dao
 
-                Log.d("Pieces-DEBUG", "InsertTestDataButton")
+//                Log.d("Pieces-DEBUG", "InsertTestDataButton")
 
                 // 计算时间范围
                 val startDate = LocalDate.ofYearDay(LocalDate.now().year - 1, 1)
@@ -185,7 +185,7 @@ fun InsertTestDataButton() {
                 // 循环插入测试数据
                 var date = startDate
                 while (!date.isAfter(endDate)) {
-                    Log.d("Pieces-DEBUG", "InsertTestDataButton: date: $date")
+//                    Log.d("Pieces-DEBUG", "InsertTestDataButton: date: $date")
 
                     val random = Random.Default
                     val hours = mutableSetOf<Int>()
@@ -210,7 +210,7 @@ fun InsertTestDataButton() {
                             quantity = Random.nextInt(1, 50),
                             dateTime = dateTime
                         )
-                        Log.d("Pieces-DEBUG", "InsertTestDataButton: product: $piece")
+//                        Log.d("Pieces-DEBUG", "InsertTestDataButton: product: $piece")
                         pieces = pieces + piece
                         index += 1
 //                      sleep(50)

@@ -26,7 +26,7 @@ fun HeaderScreen(mainTitle: String, subTitle: String) {
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
-            .height(120.dp),
+            .height(180.dp),
         color = Color(0xFFFFD700),
         contentColor = LocalContentColor.current,
         shape = RoundedCornerShape(8.dp),
@@ -41,7 +41,7 @@ fun HeaderScreen(mainTitle: String, subTitle: String) {
                 text = mainTitle,
                 style = TextStyle(
                     color = LocalContentColor.current,
-                    fontSize = 35.sp,
+                    fontSize = 56.sp,
                     fontStyle = FontStyle.Normal,
                     fontWeight = FontWeight.Bold
                 )

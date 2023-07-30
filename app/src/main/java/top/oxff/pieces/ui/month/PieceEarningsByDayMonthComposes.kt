@@ -115,7 +115,7 @@ fun PieceEarningsByDayCard(pieceEarningsByDay: PieceEarningsByDay,
         elevation = CardDefaults.cardElevation(4.dp),
         modifier = Modifier
             .fillMaxWidth()
-            .size(150.dp)
+            .size(180.dp)
             .padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
         Row {

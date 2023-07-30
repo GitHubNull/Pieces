@@ -59,7 +59,7 @@ fun MonthScreenContent(
         val formattedString = pieceEarningsByMonthState.yearMonth.format(formatter2)
         Box(modifier = Modifier
             .fillMaxWidth()
-            .weight(2f)) {
+            .weight(3f)) {
             MonthScreenHeader(yearMonth = formattedString, monthTotal = monthTotal)
         }
 

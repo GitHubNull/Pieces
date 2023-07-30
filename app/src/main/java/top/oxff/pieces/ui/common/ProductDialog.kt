@@ -2,7 +2,6 @@
 
 package top.oxff.pieces.ui.common
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -151,9 +150,9 @@ fun ProductDialog(
                 enabled = false,
                 modifier = Modifier
                     .clickable {
-                        kotlin.run {
-                            Log.d("ProductDialog", "clickable")
-                        }
+//                        kotlin.run {
+//                            Log.d("ProductDialog", "clickable")
+//                        }
                         onEvent(
                             PieceEarningsByDayEvent.OnChangeShowDatePicker(
                                 true
@@ -192,16 +191,14 @@ fun ProductDialog(
     if (state.showDatePicker) {
         CardDatePickerDialog.builder(contextState.value)
             .setTitle("选择日期时间")
+            .showBackNow(true)
             .setDefaultTime(millisecond)
             .setDisplayType()
             .setOnCancel {
-                run {
-                    Log.d("ProductDialog", "setOnCancel")
-                }
                 onEvent(PieceEarningsByDayEvent.OnChangeShowDatePicker(false))
             }
             .setOnChoose { millisecond ->
-                Log.d("ProductDialog", "setOnChoose")
+//                Log.d("ProductDialog", "setOnChoose")
                 onEvent(PieceEarningsByDayEvent.OnChangeShowDatePicker(false))
                 val instant = Instant.ofEpochMilli(millisecond)
                 val zoneId = ZoneId.of("Asia/Shanghai")
