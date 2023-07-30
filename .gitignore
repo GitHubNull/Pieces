@@ -13,4 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-/app/src/androidTest/java/top/oxff/pieces/
+/app/src/androidTest
+/app/src/test
