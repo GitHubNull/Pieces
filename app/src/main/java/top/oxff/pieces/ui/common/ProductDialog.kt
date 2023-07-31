@@ -6,10 +6,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.AttachMoney
 import androidx.compose.material.icons.filled.BubbleChart
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.EditCalendar
@@ -25,9 +25,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.loper7.date_time_picker.dialog.CardDatePickerDialog
+import top.oxff.pieces.R
 import top.oxff.pieces.day.PieceEarningsByDayEvent
 import top.oxff.pieces.day.PieceEarningsByDayState
 import top.oxff.pieces.types.DialogType
@@ -72,7 +74,8 @@ fun ProductDialog(
             OutlinedTextField(
                 leadingIcon = {
                     Icon(
-                        imageVector = Icons.Filled.AttachMoney,
+                        painter = painterResource(id = R.drawable.rmb_1),
+                        modifier = Modifier.size(24.dp),
                         contentDescription = "单价",
                         tint = Color.Blue
                     )

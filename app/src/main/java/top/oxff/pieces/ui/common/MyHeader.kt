@@ -2,7 +2,7 @@ package top.oxff.pieces.ui.common
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -25,7 +25,7 @@ fun HeaderScreen(mainTitle: String, subTitle: String) {
     Surface(
         modifier = Modifier
             .padding(16.dp)
-            .fillMaxWidth()
+            .fillMaxSize()
             .height(180.dp),
         color = Color(0xFFFFD700),
         contentColor = LocalContentColor.current,
@@ -34,9 +34,12 @@ fun HeaderScreen(mainTitle: String, subTitle: String) {
         shadowElevation = 4.dp,
         border = null
     ){
+//        var fontSize by remember { mutableStateOf(56.sp) }
+
         Column(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(8.dp)
         ) {
+
             Text(
                 text = mainTitle,
                 style = TextStyle(
@@ -46,7 +49,7 @@ fun HeaderScreen(mainTitle: String, subTitle: String) {
                     fontWeight = FontWeight.Bold
                 )
             )
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = subTitle,
                 style = TextStyle(

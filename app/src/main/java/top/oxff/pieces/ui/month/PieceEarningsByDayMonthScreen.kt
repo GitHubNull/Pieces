@@ -55,7 +55,7 @@ fun MonthScreenContent(
     }
 
     Column(Modifier.fillMaxSize()) {
-        val formatter2 = DateTimeFormatter.ofPattern("yyyy年-MM月", Locale.CHINA)
+        val formatter2 = DateTimeFormatter.ofPattern("yyyy年MM月", Locale.CHINA)
         val formattedString = pieceEarningsByMonthState.yearMonth.format(formatter2)
         Box(modifier = Modifier
             .fillMaxWidth()

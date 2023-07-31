@@ -26,18 +26,25 @@ fun TabItem(@DrawableRes iconId: Int, title: String, modifier: Modifier = Modifi
     }
 }
 
+//@Preview
+//@Composable
+//fun PreBottomBar(){
+//    BottomBar(0, {})
+//}
+
 @Composable
 fun BottomBar(selected: Int, onSelectedChanged: (Int)->Unit) {
+    val orange = Color(0xFFFFA500)
     Row (Modifier.background(Color.LightGray)){
         TabItem(
-            R.drawable.rili,
+            R.drawable.ri_chu_ri_luo,
             "日",
             Modifier
                 .weight(1f)
                 .clickable {
                     onSelectedChanged(0)
                 },
-            if (0 == selected) Color.Green else Color.Black)
+            if (0 == selected) orange.copy(alpha = 1f) else Color.Black.copy(alpha = 0.5f))
 
         TabItem(
             R.drawable.yueliang,
@@ -47,7 +54,7 @@ fun BottomBar(selected: Int, onSelectedChanged: (Int)->Unit) {
                 .clickable {
                     onSelectedChanged(1)
                 },
-            if (1 == selected) Color.Green else Color.Black)
+            if (1 == selected) orange.copy(alpha = 1f) else Color.Black.copy(alpha = 0.5f))
 
         TabItem(
             R.drawable.calendar,
@@ -57,7 +64,7 @@ fun BottomBar(selected: Int, onSelectedChanged: (Int)->Unit) {
                 .clickable {
                     onSelectedChanged(2)
                 },
-            if (2 == selected) Color.Green else Color.Black)
+            if (2 == selected) orange.copy(alpha = 1f) else Color.Black.copy(alpha = 0.5f))
     }
 }
 

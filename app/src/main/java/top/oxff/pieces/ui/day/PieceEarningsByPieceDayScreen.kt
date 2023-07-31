@@ -42,7 +42,7 @@ import java.time.format.DateTimeFormatter
 
 @Composable
 fun DayScreen(dateState: PieceEarningsByDayState, dayOnEvent: (PieceEarningsByDayEvent) -> Unit) {
-    val formatterDay: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+//    val formatterDay: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd")
     Column(Modifier.fillMaxWidth()) {
 
         if (dateState.dialogType != DialogType.HIDE) {
@@ -59,7 +59,7 @@ fun DayScreen(dateState: PieceEarningsByDayState, dayOnEvent: (PieceEarningsByDa
 
 
         if (totalMoney > BigDecimal.ZERO) totalMoney.toEngineeringString() else "0.00"
-        dateState.targetDate.format(formatterDay)
+//        val formatDate = dateState.targetDate.format(formatterDay)
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -94,7 +94,7 @@ fun DayScreen(dateState: PieceEarningsByDayState, dayOnEvent: (PieceEarningsByDa
 fun DayHeaderScreen(dayEarnings: BigDecimal, dateTime: LocalDateTime) {
     HeaderScreen(
         mainTitle = dayEarnings.toPlainString(),
-        subTitle = dateTime.format(DateTimeFormatter.ofPattern("yyyy年-MM月-dd日"))
+        subTitle = dateTime.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日"))
     )
 }
 
